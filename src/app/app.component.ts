@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Demo1';
+  Parent: string = "Inparent";
+  popsparent(){
+    console.log("hello");
+  }
 }

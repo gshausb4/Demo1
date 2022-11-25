@@ -1,0 +1,34 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6">
+            <label for="">Property Type</label>
+            <input type="text" [(ngModel)]="propertytype">
+        </div>
+        <div class="col-md-6">
+            <label for="">Property Rent</label>
+            <input type="text" [(ngModel)]="propertyrent">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead class="dark">
+                        <tr>
+                            <th>Type</th>
+                            <th>Rent</th>
+                            <th>Place</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let property of filteredProperties()">
+                            <td>{{property.Type}}</td>
+                            <td>{{property.Rent}}</td>
+                            <td>{{property.Place}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
