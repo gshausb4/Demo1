@@ -9,8 +9,8 @@ import { IProperty } from './Property';
 })
 export class CrudComponent implements OnInit{
 
-propertytype: string = "";
-propertyrent: string = "";
+  propertytype: string = "";
+  propertyrent: string = "";
 
   PropertyDetails: IProperty[] = [];
   constructor(private crudService: CrudService){}
