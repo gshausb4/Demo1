@@ -3,7 +3,6 @@ import { FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 import { LoginDetails } from './Credentials';
 import { SignupService } from './signup.service';
-import { HeaderComponent } from '../header/header.component';
 
 @Component({
   selector: 'app-signup',
@@ -30,7 +29,6 @@ export class SignupComponent implements OnInit{
     this.loginDetailsList.forEach(element => {
       if(element.UserName==this.signin.value.UserName){
         if(element.Password==this.signin.value.Password){
-          
           this._router.navigateByUrl('/crud');
         }
       }
