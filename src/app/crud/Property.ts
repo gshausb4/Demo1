@@ -1,6 +1,6 @@
 export interface IProperty{
     Type: string,
-    Rent: string,
+    Rent: number,
     Place: string,
 }
 

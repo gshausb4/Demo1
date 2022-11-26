@@ -10,7 +10,7 @@ import { IProperty } from './Property';
 export class CrudComponent implements OnInit{
 
   propertytype: string = "";
-  propertyrent: string = "";
+  propertyrent: number = 0;
 
   PropertyDetails: IProperty[] = [];
   constructor(private crudService: CrudService){}
@@ -27,7 +27,7 @@ export class CrudComponent implements OnInit{
   }
 
   filteredPropertiesBasedOnRent(): IProperty[]{
-    return this.PropertyDetails.filter(property => property.Rent < this.propertyrent);
+    return this.PropertyDetails.filter(property => <number>property.Rent < <number>this.propertyrent);
   }
 
 }
