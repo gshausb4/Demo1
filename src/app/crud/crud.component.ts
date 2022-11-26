@@ -2,6 +2,12 @@ import { Component, EventEmitter, Input, Output,OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { CrudService } from './crud.service';
 import { IProperty } from './Property';
+enum BHK {
+  EMPTY = 'BHK',
+  EASY= '1BHK',
+  NORMAL = '2BHK',
+  HARD = '3BHK'
+}
 
 @Component({
   selector: 'app-crud',
@@ -26,7 +32,7 @@ export class CrudComponent implements OnInit{
   onSubmitType(){
     // console.log(this.typeForm.value.formtypeVar);
     this.sendtype = <string>this.typeForm.value.formtypeVar;
-    this.globalTempProperties = this.PropertyDetails.filter(property => property.Type.toLowerCase().includes(this.sendtype.toLowerCase()));
+    this.globalTempProperties = this.PropertyDetails.filter(property => property.Type.toLowerCase().includes(this.bhkopt.toString().toLowerCase()));
     // this.typeForm.reset();
   }
 
@@ -48,5 +54,12 @@ export class CrudComponent implements OnInit{
   filteredProperties(): IProperty[]{
     return this.globalTempProperties;
   }
+
+  display(){
+      console.log(this.bhkopt.toString());
+  }
+  public bhkopt: BHK = BHK.EMPTY; 
+  bhklist = Object.values(BHK);
+
 
 }
