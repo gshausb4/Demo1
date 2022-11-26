@@ -32,7 +32,7 @@ export class CrudComponent implements OnInit{
   onSubmitType(){
     // console.log(this.typeForm.value.formtypeVar);
     this.sendtype = <string>this.typeForm.value.formtypeVar;
-    this.globalTempProperties = this.PropertyDetails.filter(property => property.Type.toLowerCase().includes(this.bhkopt.toString().toLowerCase()));
+    this.globalTempProperties = this.PropertyDetails.filter(property => property.Type.toLowerCase().includes(this.bhk.toString().toLowerCase()));
     // this.typeForm.reset();
   }
 
@@ -56,10 +56,11 @@ export class CrudComponent implements OnInit{
   }
 
   display(){
-      console.log(this.bhkopt.toString());
+    console.log(this.bhk.toString());
+    console.log(this.bhkopted.toString());
   }
-  public bhkopt: BHK = BHK.EMPTY; 
-  bhklist = Object.values(BHK);
+  public bhk: BHK = BHK.EMPTY; 
+  bhkopted = Object.values(BHK);
 
 
 }

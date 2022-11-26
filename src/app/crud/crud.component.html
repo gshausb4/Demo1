@@ -8,8 +8,8 @@
             </form>
         </div>
         <div class="col-md-4">
-            <select [(ngModel)]="bhkopt" >
-                <option *ngFor="let bhkopt of bhklist"  [value]="bhkopt">{{bhkopt}}</option>
+            <select name="BHK" (click)="display()" [(ngModel)]="bhk" >
+                <option *ngFor="let bhk of bhkopted" [disabled]="bhk === 'BHK'" [value]="bhk">{{bhk}}</option>
             </select>
         </div>
         <div class="col-md-4">
