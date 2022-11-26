@@ -1,13 +1,20 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-6">
-            <label for="">Property Type</label>
-            <input type="text" [(ngModel)]="propertytype">
+            <form [formGroup]="typeForm" (ngSubmit)="onSubmitType()">
+                <label for="">Property Type</label>
+                <input type="text" formControlName="formtypeVar">
+                <button class="submit">GetType</button>
+            </form>
         </div>
         <div class="col-md-6">
-            <label for="">Property Rent</label>
-            <input type="text" [(ngModel)]="propertyrent">
+            <form [formGroup]="rentForm" (ngSubmit)="onSubmitRent()">
+                <label for="">Property Rent</label>
+                <input type="text" formControlName="formrentVar">
+                <button class="submit">GetBasedOnRent</button>
+            </form>
         </div>
+
     </div>
     <div class="row">
         <div class="col-md-12">
