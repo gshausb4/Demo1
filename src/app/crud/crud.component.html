@@ -1,22 +1,26 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-4">
-            <form [formGroup]="typeForm" (ngSubmit)="onSubmitType()">
-                <label for="">Property Type</label>
-                <input type="text" formControlName="formtypeVar">
-                <button class="submit">GetType</button>
+            <form (ngSubmit)="onSubmitType()">
+                <div class="form-group">
+                    <label for="">Property Type</label>
+                    <select class="form-control" name="BHK" (click)="display()" [(ngModel)]="bhk" >
+                        <option *ngFor="let bhk of bhkopted" [disabled]="bhk === 'BHK'" [value]="bhk">{{bhk}}</option>
+                    </select>
+                </div>
+                <button class="form-control bt btn-primary submit">GetType</button>
             </form>
         </div>
         <div class="col-md-4">
-            <select name="BHK" (click)="display()" [(ngModel)]="bhk" >
-                <option *ngFor="let bhk of bhkopted" [disabled]="bhk === 'BHK'" [value]="bhk">{{bhk}}</option>
-            </select>
+            
         </div>
         <div class="col-md-4">
             <form [formGroup]="rentForm" (ngSubmit)="onSubmitRent()">
-                <label for="">Property Rent</label>
-                <input type="text" formControlName="formrentVar">
-                <button class="submit">GetBasedOnRent</button>
+                <div class="form-group">
+                    <label for="">Property Rent</label>
+                    <input class="form-control" type="text" formControlName="formrentVar">
+                </div>
+                <button class="form-control btn btn-primary submit">GetBasedOnRent</button>
             </form>
         </div>
 

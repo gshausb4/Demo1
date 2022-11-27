@@ -19,19 +19,15 @@ export class CrudComponent implements OnInit{
   PropertyDetails: IProperty[] = [];
   constructor(private crudService: CrudService,private formBuilder: FormBuilder){}
 
-  typeForm = this.formBuilder.group({
-    formtypeVar: ''
-  });
+  
   
   rentForm = this.formBuilder.group({
     formrentVar: 0
   });
 
   globalTempProperties: IProperty[] = [];
-  sendtype: string = "";
   onSubmitType(){
     // console.log(this.typeForm.value.formtypeVar);
-    this.sendtype = <string>this.typeForm.value.formtypeVar;
     this.globalTempProperties = this.PropertyDetails.filter(property => property.Type.toLowerCase().includes(this.bhk.toString().toLowerCase()));
     // this.typeForm.reset();
   }
