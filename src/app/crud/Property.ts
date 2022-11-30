@@ -1,4 +1,5 @@
 export interface IProperty{
+    PROPId: number,
     Type: string,
     Rent: number,
     Place: string,

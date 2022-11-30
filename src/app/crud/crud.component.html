@@ -31,6 +31,7 @@
                 <table class="table">
                     <thead class="dark">
                         <tr>
+                            <th>Id</th>
                             <th>Type</th>
                             <th>Rent</th>
                             <th>Place</th>
@@ -38,6 +39,7 @@
                     </thead>
                     <tbody>
                         <tr *ngFor="let property of filteredProperties()">
+                            <td>{{property.PROPId}}</td>
                             <td>{{property.Type}}</td>
                             <td>{{property.Rent}}</td>
                             <td>{{property.Place}}</td>
