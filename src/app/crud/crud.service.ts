@@ -11,10 +11,16 @@ export class CrudService {
 
   constructor(private http: HttpClient) { }
 
-  url = "https://shashidhar0902.github.io/Prop/PropertyDetails.json";
+  url = "http://localhost:8080/";
 
   getAPIPropertyDetails(): Observable<IProperty[]>{
     return this.http.get<IProperty[]>(this.url);
   }
+
+  // postAPIPropertyDetails(POSTProperty: IProperty): Observable<IProperty>{
+  //   const headers = { 'content-type': 'application/json'}  
+  //   const body = JSON.stringify(POSTProperty);
+  //   return this.http.post<IProperty>(this.url, body,{'headers':headers})
+  // }
 
 }
