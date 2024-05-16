@@ -46,6 +46,26 @@
                         </tr>
                     </tbody>
                 </table>
+
+                <!-- json-component.component.html -->
+<form (ngSubmit)="onSubmit()">
+    <label for="PROPId">PROPId:</label>
+    <input type="number" id="PROPId" name="PROPId" [(ngModel)]="newProperty.PROPId" required>
+  
+    <label for="Type">Type:</label>
+    <select id="Type" name="BHK" [(ngModel)]="newProperty.Type" required>
+        <option *ngFor="let bhk of bhkopted" [disabled]="bhk === 'BHK'" [value]="bhk">{{bhk}}</option>
+    </select>
+  
+    <label for="Rent">Rent:</label>
+    <input type="number" id="Rent" name="Rent" [(ngModel)]="newProperty.Rent" required>
+  
+    <label for="Place">Place:</label>
+    <input type="text" id="Place" name="Place" [(ngModel)]="newProperty.Place" required>
+  
+    <button type="submit">Add Property</button>
+  </form>
+  
             </div>
         </div>
     </div>
