@@ -11,7 +11,7 @@ export class CrudService {
 
   constructor(private http: HttpClient) { }
 
-  url = "http://localhost:8080/";
+  url = "https://shashidhar0902.github.io/Prop/PropertyDetails.json";
 
   getAPIPropertyDetails(): Observable<IProperty[]>{
     return this.http.get<IProperty[]>(this.url);
