@@ -1,0 +1,18 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Set wrapper height to full viewport height */
+}
+
+.app-header {
+    background-color: #343a40; /* Example background color */
+    color: white; /* Example text color */
+    padding: 20px;
+    text-align: center;
+}
+
+.content {
+    flex: 1; /* Content area takes remaining vertical space */
+    padding: 20px;
+    background-color: #f8f9fa; /* Example background color */
+}

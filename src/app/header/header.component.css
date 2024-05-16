@@ -3,3 +3,17 @@ h1{
     background-color: aquamarine;
     padding: 20px;
 }
+
+.tab {
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.tabs{
+  background-color: floralwhite;
+}
+
+.tab.active {
+  background-color: #ccc;
+}

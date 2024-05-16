@@ -1,8 +1,6 @@
-<div class="container">
-    <ul class="nav nav-pills">
-        <li role="presentation" class="active"><a href="#">Home</a></li>
-        <li role="presentation"><a routerLink="/crud">Crud</a></li>
-        <li role="presentation" *ngIf="displaySignup"><a routerLink="/Signup">Signup</a></li>
-        <li role="presentation" ><a routerLink="/SignIn">SignIn</a></li>
-    </ul>
+<div class="tabs">
+    <a href="#"><div class="tab" [ngClass]="{ 'active': selectedTab === 'Home' }" (click)="selectTab('Home')" role="presentation">Home</div></a>
+    <a routerLink="/crud"><div class="tab" [ngClass]="{ 'active': selectedTab === 'crud' }" (click)="selectTab('crud')" role="presentation">Crud</div></a>
+    <a routerLink="/Signup"><div class="tab" [ngClass]="{ 'active': selectedTab === 'signin' }" (click)="selectTab('signin')" role="presentation" *ngIf="displaySignup">Signup</div></a>
+    <a routerLink="/SignIn"><div class="tab" [ngClass]="{ 'active': selectedTab === 'signup' }" (click)="selectTab('signup')" role="presentation" >SignIn</div></a>
 </div>

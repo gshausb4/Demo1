@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
   displaySignup: boolean = true;
+  selectedTab: string = 'Home'; // Initialize selected tab
+
+  selectTab(tab: string) {
+    this.selectedTab = tab; // Update selected tab
+  }
 }
