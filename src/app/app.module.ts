@@ -10,7 +10,7 @@ import { CrudComponent } from './crud/crud.component';
 import { HeaderComponent } from './header/header.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { SignupComponent } from './signup/signup.component';
-import { SignInComponent } from './sign-in/sign-in.component';
+import { NewuserComponent } from './newuser/newuser.component';
 
 @NgModule({
   declarations: [
@@ -19,14 +19,14 @@ import { SignInComponent } from './sign-in/sign-in.component';
     HeaderComponent,
     WelcomeComponent,
     SignupComponent,
-    SignInComponent,
+    NewuserComponent,
     
   ],
   imports: [ReactiveFormsModule, FormsModule,
     BrowserModule, HttpClientModule,
     AppRoutingModule,RouterModule.forRoot([
       {path:'Signup',component:SignupComponent},
-      {path:'SignIn',component:SignInComponent},
+      {path:'NewUser',component:NewuserComponent},
       {path:'crud',component:CrudComponent},
       {path:'',component:WelcomeComponent}
     ])

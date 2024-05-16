@@ -1,6 +1,6 @@
 <div class="tabs">
     <a href="#"><div class="tab" [ngClass]="{ 'active': selectedTab === 'Home' }" (click)="selectTab('Home')" role="presentation">Home</div></a>
     <a routerLink="/crud"><div class="tab" [ngClass]="{ 'active': selectedTab === 'crud' }" (click)="selectTab('crud')" role="presentation">Crud</div></a>
-    <a routerLink="/Signup"><div class="tab" [ngClass]="{ 'active': selectedTab === 'signin' }" (click)="selectTab('signin')" role="presentation" *ngIf="displaySignup">Signup</div></a>
-    <a routerLink="/SignIn"><div class="tab" [ngClass]="{ 'active': selectedTab === 'signup' }" (click)="selectTab('signup')" role="presentation" >SignIn</div></a>
+    <a routerLink="/Signup"><div class="tab" [ngClass]="{ 'active': selectedTab === 'signup' }" (click)="selectTab('signup')" role="presentation" *ngIf="displaySignup">Signup</div></a>
+    <a routerLink="/NewUser"><div class="tab" [ngClass]="{ 'active': selectedTab === 'newuser' }" (click)="selectTab('newuser')" role="presentation" >NewUser</div></a>
 </div>
