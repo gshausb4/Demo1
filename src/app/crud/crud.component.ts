@@ -37,6 +37,18 @@ export class CrudComponent implements OnInit{
     // );
   }
 
+  deleteProperty(propertyId: number) {
+    if (confirm('Are you sure you want to delete this property?')) {
+      this.crudService.deleteProperty(propertyId).subscribe(() => {
+        console.log('Property deleted successfully');
+        // Refresh the data after deletion
+        this.getJsonData();
+      }, error => {
+        console.error('Error deleting property:', error);
+      });
+    }
+  }
+
   onSubmit() {
     console.log(this.newProperty.PROPId,this.newProperty.Place,this.newProperty.Rent,this.newProperty.Type);
     // Assuming your service method to post data is named writeData

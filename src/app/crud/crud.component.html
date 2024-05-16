@@ -35,6 +35,7 @@
                             <th>Type</th>
                             <th>Rent</th>
                             <th>Place</th>
+                            <th>Actions</th> <!-- New column for delete button -->
                         </tr>
                     </thead>
                     <tbody>
@@ -43,6 +44,7 @@
                             <td>{{property.Type}}</td>
                             <td>{{property.Rent}}</td>
                             <td>{{property.Place}}</td>
+                            <td><button (click)="deleteProperty(property.PROPId)">Delete</button></td> <!-- Delete button -->
                         </tr>
                     </tbody>
                 </table>

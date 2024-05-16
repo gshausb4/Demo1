@@ -33,6 +33,26 @@ app.post('/api/data', (req, res) => {
   res.status(200).json({ message: 'Data appended successfully' });
 });
 
+// Route to delete data by property ID
+app.delete('/api/data/:propertyId', (req, res) => {
+  const propertyId = req.params.propertyId;
+
+  // Find the index of the property with the specified ID
+  const index = jsonData.findIndex(property => property.PROPId === parseInt(propertyId));
+
+  if (index !== -1) {
+    // Remove the property with the specified ID from the array
+    jsonData.splice(index, 1);
+
+    // Write the updated data back to the JSON file
+    fs.writeFileSync('data.json', JSON.stringify(jsonData));
+
+    res.status(200).json({ message: 'Data deleted successfully' });
+  } else {
+    res.status(404).json({ message: 'Property not found' });
+  }
+});
+
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
