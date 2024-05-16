@@ -7,9 +7,11 @@ import {LoginDetails} from './Credentials';
 })
 export class SignupService {
 
-  constructor(private http: HttpClient) { }
+  private url = "../../assets/userData.json";
 
-  url = "https://shashidhar0902.github.io/Prop/UserDetails.json";
+  constructor(private http: HttpClient) { }
+  
+  //url = "https://shashidhar0902.github.io/Prop/UserDetails.json";
   
   getAPILoginDetails(): Observable<LoginDetails[]>{
     return this.http.get<LoginDetails[]>(this.url);

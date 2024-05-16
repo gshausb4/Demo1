@@ -9,18 +9,20 @@ import { IProperty } from './Property';
 
 export class CrudService {
 
+  private jsonUrl = '../../assets/data.json'; // assuming your JSON file is in assets folder
+
   constructor(private http: HttpClient) { }
 
-  url = "https://shashidhar0902.github.io/Prop/PropertyDetails.json";
-
-  getAPIPropertyDetails(): Observable<IProperty[]>{
-    return this.http.get<IProperty[]>(this.url);
+  //url = "https://shashidhar0902.github.io/Prop/PropertyDetails.json";
+  
+  // Read data from JSON file
+  getPropertiesData(): Observable<IProperty[]> {
+    return this.http.get<IProperty[]>(this.jsonUrl);
   }
 
-  // postAPIPropertyDetails(POSTProperty: IProperty): Observable<IProperty>{
-  //   const headers = { 'content-type': 'application/json'}  
-  //   const body = JSON.stringify(POSTProperty);
-  //   return this.http.post<IProperty>(this.url, body,{'headers':headers})
-  // }
+  // Write data to JSON file
+  writeData(data: IProperty[]): Observable<any> {
+    return this.http.post(this.jsonUrl, data);
+  }
 
 }
