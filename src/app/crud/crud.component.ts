@@ -2,6 +2,7 @@ import { Component, EventEmitter, Input, Output,OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { CrudService } from './crud.service';
 import { IProperty } from './models/Property';
+
 enum BHK {
   EMPTY = 'BHK',
   EASY= '1BHK',
@@ -25,16 +26,10 @@ export class CrudComponent implements OnInit{
     formrentVar: 0
   });
 
-  //temprop: IProperty = {"PROPId":50,"Type":"3BHK","Rent": 30000,"Place":"LOC30"};
   globalTempProperties: IProperty[] = [];
   onSubmitType(){
-    // console.log(this.typeForm.value.formtypeVar);
     this.globalTempProperties = this.propertyDetails.filter(property => property.Type.toLowerCase().includes(this.bhk.toString().toLowerCase()));
-    // this.typeForm.reset();
     console.log(this.globalTempProperties);
-    // this.crudService.postAPIPropertyDetails(this.temprop).subscribe(
-      
-    // );
   }
 
   deleteProperty(propertyId: number) {

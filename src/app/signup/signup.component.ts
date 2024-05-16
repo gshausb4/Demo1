@@ -1,7 +1,7 @@
 import { Component,OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
-import { LoginDetails } from './Credentials';
+import { LoginDetails } from './models/Credentials';
 import { SignupService } from './signup.service';
 
 @Component({

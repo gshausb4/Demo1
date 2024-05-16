@@ -1,19 +1,19 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import {Observable} from 'rxjs';
-import {LoginDetails} from './Credentials';
+import {LoginDetails} from './models/Credentials';
+import { signupConstants } from './constants/signupconstants';
 @Injectable({
   providedIn: 'root'
 })
 export class SignupService {
 
-  private url = "../../assets/userData.json";
+  private url = signupConstants.url;
 
   constructor(private http: HttpClient) { }
-  
-  //url = "https://shashidhar0902.github.io/Prop/UserDetails.json";
-  
+    
   getAPILoginDetails(): Observable<LoginDetails[]>{
     return this.http.get<LoginDetails[]>(this.url);
   }
+
 }

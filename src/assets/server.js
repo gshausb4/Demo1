@@ -12,9 +12,14 @@ app.use(bodyParser.json());
 
 // Read the existing JSON data
 const jsonData = JSON.parse(fs.readFileSync('data.json'));
+const userData = JSON.parse(fs.readFileSync('userData.json'));
 
 app.get('/api/data', (req, res) => {
   res.json(jsonData);
+});
+
+app.get('/api/userData', (req, res) => {
+  res.json(userData);
 });
 
 app.post('/api/data', (req, res) => {
