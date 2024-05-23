@@ -24,7 +24,9 @@ export class SignupComponent implements OnInit{
       console.log(Response);
     });
   }
+  
   templogindetail: LoginDetails | undefined;
+
   onSubmit(){
     this.loginDetailsList.forEach(element => {
       if(element.UserName==this.signin.value.UserName){

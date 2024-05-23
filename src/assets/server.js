@@ -23,7 +23,9 @@ app.get('/api/userData', (req, res) => {
   res.json(userData);
 });
 
+//to create a new user details in userfulldata.json
 app.post('/api/userfulldata', (req, res) => {
+  
   // Assuming req.body contains the new data to be appended to the JSON file
   const newData = req.body;
 
