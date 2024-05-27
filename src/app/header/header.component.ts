@@ -26,11 +26,11 @@ export class HeaderComponent {
     this.router.navigateByUrl('/Signup');
   }
 
-  selectedTab: string = 'Home'; 
+  selectedTab: string | any; 
   
 
   // Initialize selected tab
   selectTab(tab: string) {
-    this.selectedTab = tab; // Update selected tab
+    this.selectedTab = tab; 
   }
 }
