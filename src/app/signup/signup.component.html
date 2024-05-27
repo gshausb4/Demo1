@@ -1,7 +1,8 @@
+
+
 <body class="text-center">
   <form class="form-signin" [formGroup]="signin" (ngSubmit)="onSubmit()">
-    <img class="mb-4" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="72"
-      height="72">
+    <div class="mb-4" alt="Logo" width="72" height="72"></div>
     <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
     <label for="inputEmail" class="sr-only">Email address</label>
     <input type="email" formControlName="UserName" id="inputEmail" class="form-control" placeholder="Email address"
@@ -15,8 +16,7 @@
       </label>
     </div>
     <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    <button class="btn btn-lg btn-secondary btn-block" type="button" (click)="onNewUser()">New User</button>
     <p class="mt-5 mb-3 text-muted">© 2024-2025</p>
   </form>
-
-
 </body>

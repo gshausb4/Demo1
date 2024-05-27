@@ -1,6 +1,19 @@
 <div class="tabs">
-    <a href="#"><div class="tab" [ngClass]="{ 'active': selectedTab === 'Home' }" (click)="selectTab('Home')" role="presentation">Home</div></a>
-    <a routerLink="/crud"><div class="tab" [ngClass]="{ 'active': selectedTab === 'crud' }" (click)="selectTab('crud')" role="presentation">Crud</div></a>
-    <a routerLink="/Signup"><div class="tab" [ngClass]="{ 'active': selectedTab === 'signup' }" (click)="selectTab('signup')" role="presentation" *ngIf="displaySignup">Signup</div></a>
-    <a routerLink="/NewUser"><div class="tab" [ngClass]="{ 'active': selectedTab === 'newuser' }" (click)="selectTab('newuser')" role="presentation" >NewUser</div></a>
+    <a routerLink="/welcome" >
+        <div class="tab" [ngClass]="{ 'active': selectedTab === 'Home' }" (click)="selectTab('Home')"
+            role="presentation">Home</div>
+    </a>
+    <a routerLink="/crud">
+        <div class="tab" [ngClass]="{ 'active': selectedTab === 'crud' }" (click)="selectTab('crud')"
+            role="presentation">Crud</div>
+    </a>
+    <!-- <a routerLink="/Signup">
+        <div class="tab" [ngClass]="{ 'active': selectedTab === 'signup' }" (click)="selectTab('signup')"
+            *ngIf="!loggedIn" role="presentation">Signup</div>
+    </a> -->
+    <!-- <a routerLink="/NewUser">
+        <div class="tab" [ngClass]="{ 'active': selectedTab === 'newuser' }" (click)="selectTab('newuser')"
+            role="presentation">NewUser</div>
+    </a> -->
+    <a *ngIf="loggedIn"> <button (click)="logout()">Logout</button> </a>
 </div>

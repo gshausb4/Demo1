@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NewUserService } from './newuser.service';
 import { IUser } from './models/UserModel';
 import { FormBuilder } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-newuser',
@@ -13,7 +14,11 @@ export class NewuserComponent {
   newUser: IUser = {} as IUser;
   count: number = 0;
 
-  constructor(private newUserService: NewUserService,private formBuilder: FormBuilder) { }
+  constructor(
+    private newUserService: NewUserService,
+    private formBuilder: FormBuilder,
+    private router: Router
+    ) { }
 
 
   //store the form details in a json file on submit
@@ -32,6 +37,6 @@ export class NewuserComponent {
     this.newUserService.getUserData().subscribe( data => {
       console.log(data.length);
     });
+    this.router.navigateByUrl("/Signup");
   }
-  
 }

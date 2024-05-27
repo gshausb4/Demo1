@@ -31,10 +31,17 @@ export class SignupComponent implements OnInit{
     this.loginDetailsList.forEach(element => {
       if(element.UserName==this.signin.value.UserName){
         if(element.Password==this.signin.value.Password){
-          this._router.navigateByUrl('/crud');
+          //creating a sessionstorage to set logged in as true
+          sessionStorage.setItem("loggedIn", JSON.stringify(true));
+          this._router.navigateByUrl('/welcome');
         }
       }
     });
+  }
+
+  //sign up a new user
+  onNewUser(){
+    this._router.navigateByUrl('/NewUser');
   }
 
 }

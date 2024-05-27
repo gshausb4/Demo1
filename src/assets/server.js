@@ -23,6 +23,10 @@ app.get('/api/userData', (req, res) => {
   res.json(userData);
 });
 
+app.get('/api/userfulldata', (req, res) => {
+  res.json(userFullData);
+});
+
 //to create a new user details in userfulldata.json
 app.post('/api/userfulldata', (req, res) => {
   

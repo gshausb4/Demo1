@@ -28,7 +28,9 @@ import { NewuserComponent } from './newuser/newuser.component';
       {path:'Signup',component:SignupComponent},
       {path:'NewUser',component:NewuserComponent},
       {path:'crud',component:CrudComponent},
-      {path:'',component:WelcomeComponent}
+      {path:'header',component:HeaderComponent},
+      {path:'welcome',component:WelcomeComponent},
+      {path:'',component:SignupComponent}
     ])
   ],
   providers: [],
