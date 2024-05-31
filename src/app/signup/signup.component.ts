@@ -33,6 +33,7 @@ export class SignupComponent implements OnInit{
         if(element.Password==this.signin.value.Password){
           //creating a sessionstorage to set logged in as true
           sessionStorage.setItem("loggedIn", JSON.stringify(true));
+          sessionStorage.setItem("userName", JSON.stringify(this.signin.value.UserName));
           this._router.navigateByUrl('/welcome');
         }
       }

@@ -14,5 +14,8 @@ export class SessionStorageService {
   setItem(key: string, value: any): void {
         sessionStorage.setItem(key,value);
     }
-  // You can also implement other methods like setItem, removeItem, clear etc. if needed.
+  //  removeItem
+  removeItem(key: string): void {
+    sessionStorage.removeItem(key);
+  }
 }

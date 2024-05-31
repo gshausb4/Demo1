@@ -22,6 +22,8 @@ export class HeaderComponent {
     // Perform logout actions here, such as clearing sessionStorage, redirecting, etc.
     // For example:
     this.sessionStorageService.setItem('loggedIn',false);
+    //remove sessionstorage item
+    this.sessionStorageService.removeItem('userName');
     this.loggedIn = false;
     this.router.navigateByUrl('/Signup');
   }
