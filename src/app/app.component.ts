@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Demo1';
+  title = 'PropertyApp';
   Parent: string = "Inparent";
   popsparent(){
     console.log("hello");
