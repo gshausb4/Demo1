@@ -45,9 +45,9 @@ export class CrudComponent implements OnInit{
   }
 
   onSubmit() {
-    console.log(this.newProperty.PROPId,this.newProperty.Place,this.newProperty.Rent,this.newProperty.Type);
+    console.log(this.newProperty.PropID,this.newProperty.Place,this.newProperty.Rent,this.newProperty.Type);
     // Assuming your service method to post data is named writeData
-    this.propData.PROPId = this.newProperty.PROPId;
+    this.propData.PropID = this.newProperty.PropID;
     this.propData.Type = this.newProperty.Type;
     this.propData.Rent = this.newProperty.Rent;
     this.propData.Place = this.newProperty.Place;

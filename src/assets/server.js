@@ -66,7 +66,7 @@ app.delete('/api/data/:propertyId', (req, res) => {
   const propertyId = req.params.propertyId;
 
   // Find the index of the property with the specified ID
-  const index = jsonData.findIndex(property => property.PROPId === parseInt(propertyId));
+  const index = jsonData.findIndex(property => property.PropID === parseInt(propertyId));
 
   if (index !== -1) {
     // Remove the property with the specified ID from the array
