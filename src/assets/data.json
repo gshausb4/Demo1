@@ -1,1 +1,1 @@
-[{"PROPId":1,"Type":"1BHK","Rent":19999,"Place":"Loc1"},{"PROPId":3,"Type":"1BHK","Rent":123,"Place":"dda"},{"PROPId":2,"Type":"1BHK","Rent":123,"Place":"hello"}]
+[{"PropID":1,"Type":"1BHK","Rent":19999,"Place":"Loc1"},{"PropID":3,"Type":"1BHK","Rent":123,"Place":"dda"},{"PropID":2,"Type":"1BHK","Rent":123,"Place":"hello"},{"PropID":4,"Type":"2BHK","Rent":142,"Place":"fasf"}]
