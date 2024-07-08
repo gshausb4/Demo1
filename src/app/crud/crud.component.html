@@ -41,19 +41,19 @@
                     </thead>
                     <tbody>
                         <tr *ngFor="let property of filteredProperties()">
-                            <td>{{property.PROPId}}</td>
+                            <td>{{property.PropID}}</td>
                             <td>{{property.Type}}</td>
                             <td>{{property.Rent}}</td>
                             <td>{{property.Place}}</td>
-                            <td><button (click)="deleteProperty(property.PROPId)">Delete</button></td> <!-- Delete button -->
+                            <td><button (click)="deleteProperty(property.PropID)">Delete</button></td> <!-- Delete button -->
                         </tr>
                     </tbody>
                 </table>
 
                 <!-- json-component.component.html -->
 <form (ngSubmit)="onSubmit()">
-    <label for="PROPId">PROPId:</label>
-    <input type="number" id="PROPId" name="PROPId" [(ngModel)]="newProperty.PROPId" required>
+    <label for="PropID">PropID:</label>
+    <input type="number" id="PropID" name="PropID" [(ngModel)]="newProperty.PropID" required>
   
     <label for="Type">Type:</label>
     <select id="Type" name="BHK" [(ngModel)]="newProperty.Type" required>
